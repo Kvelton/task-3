@@ -12,7 +12,7 @@ export function Contacts() {
 					<li className="connect__text">8 (3902) 24-30-71</li>
 					<li className="connect__text connect__text_icon3">kancler@vskhakasia.ru</li>
 				</ul>
-				<Image src={mapImage} alt="Карта" className="connect__map" />
+				<img src="img/map.png" alt="Карта" className="connect__map" />
 			</section>
 		</article>
 	)

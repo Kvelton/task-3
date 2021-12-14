@@ -59,7 +59,7 @@
   display: none;
 }
 
-.tours-block--hidden-visible .tours-block--hidden {
+.tours-block--hidden._visible {
   display: flex;
   flex-direction: column;
   align-items: flex-start;

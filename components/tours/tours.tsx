@@ -1,4 +1,12 @@
 import { Tour, ToursBlock } from "./tours-block"
+let ManyTours;
+let ClickButtonManyTours: boolean
+ClickButtonManyTours = false
+
+const ClickManyTours = () => {
+	ManyTours = document.querySelectorAll('.tours-block--hidden')
+	//ManyTours.forEach()
+}
 
 const ourTours: ToursBlock[] = [
 	{
@@ -51,7 +59,7 @@ export function Tours() {
 					)
 				}
 			</div>
-			<button className="tours-subtext">Больше туров</button>
+			<button className="tours-subtext" type="button" onClick={ClickManyTours}>Больше туров</button>
 		</article>
 	)
 }
