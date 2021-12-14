@@ -5,7 +5,10 @@ ClickButtonManyTours = false
 
 const ClickManyTours = () => {
 	ManyTours = document.querySelectorAll('.tours-block--hidden')
-	//ManyTours.forEach()
+	console.log(ManyTours)
+	ManyTours.forEach(function (entry) {
+		entry?.classList.toggle('_active')
+	})
 }
 
 const ourTours: ToursBlock[] = [
