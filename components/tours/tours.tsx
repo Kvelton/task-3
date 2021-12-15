@@ -1,14 +1,24 @@
 import { Tour, ToursBlock } from "./tours-block"
 let ManyTours;
 let ClickButtonManyTours: boolean
-ClickButtonManyTours = false
+ClickButtonManyTours = true
+let firstClickButtonManyTours: boolean
 
 const ClickManyTours = () => {
-	ManyTours = document.querySelectorAll('.tours-block--hidden')
-	console.log(ManyTours)
-	ManyTours.forEach(function (entry) {
-		entry?.classList.toggle('_active')
-	})
+	ManyTours = document.getElementsByClassName('tours-block--hidden')
+	let QuantityManyTours: number = ManyTours.length;
+
+	if (ClickButtonManyTours) {
+		for (var s = 0; s < QuantityManyTours; s++) {
+			ManyTours[s].className = 'tours-block--hidden _visible';
+			ClickButtonManyTours = false
+		}
+	} else {
+		for (var s = 0; s < QuantityManyTours; s++) {
+			ManyTours[s].className = 'tours-block--hidden';
+			ClickButtonManyTours = true
+		}
+	}
 }
 
 const ourTours: ToursBlock[] = [

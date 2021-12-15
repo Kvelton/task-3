@@ -7,6 +7,7 @@ export const Navigation = (props: { isMenuVisible: Boolean }) => {
 		document.querySelector('.menu')?.classList.toggle('_active')
 		document.querySelector('.header__menu-button')?.classList.toggle('_active')
 		document.querySelector('.welcome-section__button')?.classList.toggle('_active')
+		document.querySelector('.welcome-section__arrow')?.classList.toggle('_active')
 		document.body.classList.toggle('_lock')
 	}
 

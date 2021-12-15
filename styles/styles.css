@@ -1,3 +1,7 @@
+html{
+  scroll-behavior: smooth
+}
+
 .sightseens__title {
   font-size: 9vw;
   font-family: Amatic SC;
