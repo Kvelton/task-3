@@ -269,10 +269,6 @@ body {
   margin: 0;
 }
 
-body._lock {
-  overflow: hidden;
-}
-
 .welcome-section {
   background: url("../public/img/background.jpg") 0 0 / cover no-repeat;
   height: 100vh;
@@ -353,9 +349,7 @@ body._lock {
   animation: arrowDown 1s infinite;
 }
 
-.welcome-section__arrow._active {
-  visibility: hidden;
-}
+
 
 @keyframes arrowDown {
   0% {
@@ -383,6 +377,10 @@ body._lock {
 }
 
 @media (max-width: 1280px) {
+  body._lock {
+    overflow: hidden;
+  }  
+
   .header__menu-button {
     z-index: 5;
     display: block;
@@ -485,6 +483,10 @@ body._lock {
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
     text-align: center;
+  }
+
+  .welcome-section__arrow._active {
+    visibility: hidden;
   }
 
   .footer-contacts{
@@ -754,6 +756,12 @@ body._lock {
     display: block;
     font-weight: 100;
     margin: 0 0 10px 110px;
+    color: #FFFFFF; 
+  }
+  .footer-menu__link{
+    font-family: Roboto;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
   }
 
   .footer-contacts__title{

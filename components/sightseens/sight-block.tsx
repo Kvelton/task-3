@@ -4,7 +4,12 @@ export interface SightseensBlock {
 	description: string
 }
 
-export function Sightseen(props: { sightseen: SightseensBlock, onClick?: (sightseens: SightseensBlock) => void }) {
+export interface SightseensProps {
+	sightseen: SightseensBlock,
+	onClick?: (sightseen: SightseensBlock) => void
+}
+
+export function Sightseen(props: SightseensProps) {
 	return (
 		<section className="sight-block">
 			<img src={props.sightseen.image} onClick={() => props.onClick ? props.onClick(props.sightseen) : null} alt="Фон для блока достопримечательности" className="sight-block__img" />

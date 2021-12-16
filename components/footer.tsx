@@ -1,13 +1,31 @@
+import Link from "next/dist/client/link"
+
 export function Footer() {
 	return (
 		<footer className="footer">
 			<nav className="footer-menu">
 				<div className="footer-menu__title">Меню</div>
 				<ul className="footer-menu__list">
-					<li className="footer-menu__item"><a data-goto="#title_list0" href="#" className="menu__link">Главная</a></li>
-					<li className="footer-menu__item"><a data-goto="#title_list1" href="#" className="menu__link">Достопримечательности</a></li>
-					<li className="footer-menu__item"><a data-goto="#title_list2" href="#" className="menu__link">Туры</a></li>
-					<li className="footer-menu__item"><a data-goto="#title_list3" href="#" className="menu__link">Контакты</a></li>
+					<li className="footer-menu__item">
+						<Link href="/#title_list0">
+							<a className="footer-menu__link">Главная</a>
+						</Link>
+					</li>
+					<li className="footer-menu__item">
+						<Link href="/#title_list1">
+							<a className="footer-menu__link">Достопримечательности</a>
+						</Link>
+					</li>
+					<li className="footer-menu__item">
+						<Link href="/#title_list2">
+							<a className="footer-menu__link">Туры</a>
+						</Link>
+					</li>
+					<li className="footer-menu__item">
+						<Link href="/#title_list3">
+							<a className="footer-menu__link">Контакты</a>
+						</Link>
+					</li>
 				</ul>
 			</nav>
 			<div className="footer-contacts">

@@ -5,7 +5,12 @@ export interface ToursBlock {
 	price: string
 }
 
-export function Tour(props: { tour: ToursBlock, onClick?: (tours: ToursBlock) => void }) {
+export interface ToursProps {
+	tour: ToursBlock,
+	onClick?: (tours: ToursBlock) => void
+}
+
+export function Tour(props: ToursProps) {
 	return (
 		<section className={props.tour.class}>
 			<div className="tours-block__gradient">

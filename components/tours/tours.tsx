@@ -1,25 +1,5 @@
+import { useState } from "react";
 import { Tour, ToursBlock } from "./tours-block"
-let ManyTours;
-let ClickButtonManyTours: boolean
-ClickButtonManyTours = true
-let firstClickButtonManyTours: boolean
-
-const ClickManyTours = () => {
-	ManyTours = document.getElementsByClassName('tours-block--hidden')
-	let QuantityManyTours: number = ManyTours.length;
-
-	if (ClickButtonManyTours) {
-		for (var s = 0; s < QuantityManyTours; s++) {
-			ManyTours[s].className = 'tours-block--hidden _visible';
-			ClickButtonManyTours = false
-		}
-	} else {
-		for (var s = 0; s < QuantityManyTours; s++) {
-			ManyTours[s].className = 'tours-block--hidden';
-			ClickButtonManyTours = true
-		}
-	}
-}
 
 const ourTours: ToursBlock[] = [
 	{
@@ -61,7 +41,27 @@ const ourTours: ToursBlock[] = [
 ]
 
 export function Tours() {
+	let ManyTours;
+	const [visible, setVisible] = useState(true)
+	const [buttonName, setButtonName] = useState("Больше")
+	const ClickManyTours = () => {
+		ManyTours = document.getElementsByClassName('tours-block--hidden')
+		let QuantityManyTours: number = ManyTours.length;
 
+		if (visible) {
+			for (var s = 0; s < QuantityManyTours; s++) {
+				ManyTours[s].className = 'tours-block--hidden _visible';
+				setButtonName("Меньше")
+				setVisible(false)
+			}
+		} else {
+			for (var s = 0; s < QuantityManyTours; s++) {
+				ManyTours[s].className = 'tours-block--hidden';
+				setButtonName("Больше")
+				setVisible(true)
+			}
+		}
+	}
 	return (
 		<article id="title_list2" className="tours">
 			<h2 className="tours__title">Туры</h2>
@@ -72,7 +72,7 @@ export function Tours() {
 					)
 				}
 			</div>
-			<button className="tours-subtext" type="button" onClick={ClickManyTours}>Больше туров</button>
+			<button className="tours-subtext" type="button" onClick={ClickManyTours}>{buttonName} туров</button>
 		</article>
 	)
 }

@@ -1,6 +1,3 @@
-import Image from "next/image"
-import mapImage from "../public/img/map.png"
-
 export function Contacts() {
 	return (
 		<article id="title_list3" className="contacts">

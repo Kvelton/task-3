@@ -1,8 +1,7 @@
 import Link from 'next/link';
-import { useState } from 'react';
 
 export const Navigation = (props: { isMenuVisible: Boolean }) => {
-
+	//
 	const handleLinkClick = () => {
 		document.querySelector('.menu')?.classList.toggle('_active')
 		document.querySelector('.header__menu-button')?.classList.toggle('_active')
